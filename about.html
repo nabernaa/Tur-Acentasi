@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <!--bu kısım index.html dosyasının head bölümünde açıklanmıştır-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turizm Cenneti Türkiye</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/e12b6268a9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--logo,menu ve diğer sayfaların başlıkları-->
+    <section class="sub-header">
+      <!--bu kısım index.html dosyasında da bulunduğu için orada açıklanmıştır-->
+      <nav>
+        <a href="index.html">
+          <img src="images/logo.png">
+        </a>
+        <div class="nav-links" id="navLinks">  
+          <ul id="menu">
+            <li><a href="index.html">Anasayfa</a></li>
+            <li><a href="about.html">Hakkımızda</a></li>
+            <li><a href="tours.html">Turlar</a></li>
+            <li><a href="contact.html">İletişim</a></li>
+          </ul>
+        </div>
+        <div class="tooltip">
+          <i class="fa-solid fa-xmark" onclick=toggleMenu()></i>
+          <span class="tooltiptext">Menüyü Aç/Kapat</span>
+        </div>
+      </nav>
+      <h1>Hakkımızda</h1>
+    </section>
+    <!--hakkımızda sayfası-->
+    <section class="hakkimizda">
+      <div class="row"> 
+          <div class="hakkimizda-col"><!--headerın altında yer alan bölümde yer alır. başlık, paragraf ve buton bulunur. kullanıcı butona tıklandığında iletişim sayfasına yönlendirilir-->
+              <h1>Biz Kimiz?</h1>
+              <p>Bizler yerli ve yabancı turistlere Türkiye'nin güzelliklerini tanıtan, görülmesi gereken yerler hakkında bilgi veren ve bu yerlere turlar düzenleyen bir organizasyonuz.</p>
+              <a href="contact.html" class="hero-btn red-btn">Bize Ulaşın!</a>
+          </div>
+          <div class="hakkimizda-col"><!--içerisinde sadece resim bulunan bir div-->
+              <img src="images/arkaplan3.png">
+          </div>
+      </div>
+    </section>
+    <!--footer ve site logoları-->
+    <section class="footer">
+      <!--bu kısım index.html dosyasında da bulunduğu için orada açıklanmıştır-->
+        <div class="icons">
+            <ul class="social-media-list">
+                <li class="social-media-item"><a href="https://www.facebook.com/" target="_blank" rel="nofollow"><i class="fab fa-facebook-f"></i></a></li>
+                <li class="social-media-item"><a href="https://twitter.com/" target="_blank" rel="nofollow"><i class="fab fa-twitter"></i></a></li>
+                <li class="social-media-item"><a href="https://www.instagram.com/" target="_blank" rel="nofollow"><i class="fab fa-instagram"></i></a></li>
+                <li class="social-media-item"><a href="https://www.linkedin.com/" target="_blank" rel="nofollow"><i class="fab fa-linkedin-in"></i></a></li>
+                <li class="social-media-item"><a href="https://www.github.com/" target="_blank" rel="nofollow"><i class="fab fa-github"></i></a></li>
+              </ul>
+        </div>
+    </section>
+    <!--menu scripti-->
+    <script>
+      //bu kısım index.html dosyasında da bulunduğu için orada açıklanmıştır
+      function toggleMenu(){
+        var menu = document.getElementById("menu");
+
+        if (menu.style.display === "none") {
+          menu.style.display = "block";
+        } else {
+          menu.style.display = "none";
+        }
+      }
+    </script>   
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turizm Cenneti Türkiye</title>
+    <link rel="shortcut icon" href="images/favicon.ico">  <!--logo satırı-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">  <!--google font paketi-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  <!--google font paketi-->
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">   <!--google font paketi-->
+    <script src="https://kit.fontawesome.com/e12b6268a9.js" crossorigin="anonymous"></script>  <!--icon satırı-->
+</head>
+<body>
+    <!--logo, menu ve sayfa başlığı-->
+    <section class="header">
+        <nav>
+            <a href="index.html"> <!--logoya tıklandığında anasayfaya dönmesi için link eklendi-->
+                <img src="images/logo.png">  <!--logo-->
+            </a>
+            <div class="nav-links" id="navLinks" style="margin-left: 45%;">   <!--navbar oluşturuldu ve margin ayarı yapıldı-->
+                <ul id="menu"> <!--navbara menu listesi eklendi ve listeye de sayfalar eklendi-->
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="about.html">Hakkımızda</a></li>
+                <li><a href="tours.html">Turlar</a></li>
+                <li><a href="contact.html">İletişim</a></li>
+                </ul>
+            </div>
+            <div class="tooltip"> <!--çarpı butonuna tooltip eklendi-->
+                <i style="padding-bottom: 10px; color: white;" class="fa-solid fa-xmark" onclick=toggleMenu()></i> <!--çarpı butonuna fonksiyon atandı-->
+                <span class="tooltiptext">Menüyü Aç/Kapat</span> <!--çarpı butonu üzerine gelince görünecek yazı-->
+            </div>
+        </nav>
+        <div class="text-box"><!--ana sayfa başlığı ve yazısı için textbox-->
+            <h1 class="anabaslik">Büyüleyici Güzellikleriyle Türkiye</h1> 
+            <p>"Hoşgeldiniz! Türkiye'nin büyüleyici güzelliklerini keşfetmek için sizi keyifli bir yolculuğa davet ediyoruz.
+                Web sitemiz, Türkiye'nin çeşitli turizm duraklarını tanıtan, unutulmaz bir tatil deneyimi sunan bir kaynak olarak hizmet vermektedir. 
+                Muhteşem plajları, tarihi ve kültürel mirası, nefes kesen doğal güzellikleri ve benzersiz lezzetleri gibi Türkiye'nin sunduğu turizm olanaklarını keşfetmek için sizleri bekliyoruz!" </p>
+        </div>
+    </section>
+    <!--turistik yerler ve şehirler-->
+    <section class="city">
+        <h1>Görülmesi Gereken Yerler</h1>
+        <div class="row">
+            <div class="city-col"><!--her bir turistik yer için div oluşturuldu-->
+                <img style="float: left" src="images/gobeklitepe.jpg" alt="gobeklitepe"><!--float: left/right özelliği ile sağa sola dayalı bir şekilde resim eklendi-->
+                <div>
+                    <h3>Göbeklitepe</h3><!--her bir turistik yer için başlık-->
+                    <!--her bir turistik yer için açıklama paragrafı-->
+                    <p>Göbeklitepe veya Göbekli Tepe, Türkiye'nin Güneydoğu Anadolu Bölgesi'ndeki Şanlıurfa ilinin 18 km kuzeydoğusunda, 
+                        Haliliye ilçesine bağlı Örencik köyü yakınlarında yer alan Neolitik bir arkeolojik sit alanıdır. 
+                        MÖ 9600–9500 civarına tarihlenen Göbeklitepe, dünyanın şu ana kadar bilinen en eski tarihî yapısıdır. 
+                        Bazı popüler kaynaklarda "tarihin sıfır noktası" nitelendirmesiyle de anılmaktadır. 
+                        Yapıt, dünyanın bilinen en eski megalitleri olan taş sütunlarla, bir dizi büyük dairesel yapıdan oluşmaktadır. 
+                        Çanak Çömleksiz Neolitik Çağ'a ait olduğu düşünülen bu yapıda T biçimindeki 10-12 dikilitaş yuvarlak planda dizilmiş, araları ise taş duvarlarla örülmüştür. 
+                        Yapının merkezinde daha yüksek boyda olan iki dikilitaş, karşılıklı olarak yerleştirilmiştir. 
+                        Bu dikilitaşların çoğu üzerinde insan, eller ve kollar, çeşitli hayvan ve soyut semboller, kabartılarak veya oyularak betimlenmiştir. 
+                        Bölgede yapılan kazılarda çıkartılan bazı heykel ve taşlar, günümüzde Şanlıurfa Arkeoloji Müzesi'nde sergilenmektedir.</p>
+                </div>
+            </div>
+            <div class="city-col">
+                <img style="float: right" src="images/efes.jpg" alt="efes">
+                <h3>Efes Antik Kenti</h3>
+                <p>
+                Efes, Anadolu'nun batı kıyısında, bugünkü İzmir ilinin Selçuk ilçesinin üç kilometre güneybatısında yer alan antik bir Luvi şehriydi. 
+                Şehir Anadolu'da Yunan sömürgeciliğinin başlamasıyla birlikte İyonya ve daha sonra Roma dönemlerinde de önemini korumuştur. 
+                Kuruluşu Cilalı Taş Devri'ne yani MÖ 6000 yıllarına dayanır. MÖ 10. yüzyılda eski Arzava başkentinin yerine Attik ve 
+                İyonyalı Yunan kolonistleri tarafından inşa edilmiştir.<br><br>
+                Klasik Yunan döneminde İyonya'nın on iki şehrinden biriydi. Şehir, MÖ 129'da Roma Cumhuriyeti ‘nin kontrolüne geçtikten sonra gelişti.<br><br>
+                1994'te UNESCO tarafından Dünya Mirası Geçici Listesi'ne dahil edilen Efes 2015'te ise Dünya Mirası olarak tescil edildi.
+                </p>
+
+            </div>
+            <div class="city-col">
+                <img style="float: left" src="images/pamukkale.jpg" alt="pamukkale">
+                <h3>Pamukkale Travertenleri</h3>
+                <p>
+                    Pamukkale, güneybatı Türkiye'deki Denizli ilinde doğal bir mevkidir. 
+                    Kent Kaplıcaları ve akan sulardan kalan karbonat minerallerin teraslarını, travertenlerini kapsamaktadır.<br><br>
+                    Türkiye'nin Ege bölgesinde, ılıman bir iklimi olan Menderes Nehri vadisinde bulunur. Hem yerli hem de yabancı turistlerin tercih yerlerindendir.<br><br>
+                    Eski Hierapolis kenti, toplam 2.700 metre uzunluğunda, 600 metre genişliğinde ve 160 metre yüksekliğindeki beyaz "kalenin" üzerine inşa edilmişti. 
+                    Pamukkale, Denizli'nin 20 km uzaktaki merkezindeki vadinin karşı tarafındaki tepelerden görülebilir. 5–10 km yakınında Laodikya antik kenti bulunur. 
+                    5 km ilerisinde ise uluslararası bir termal merkez olan Karahayıt köyü vardır. 
+                    Pamukkale UNESCO tarafından belirlenen Dünya Miras Listesi'nde yer almaktadır. 
+                    Travertenler; görsel zenginliğin yanı sıra kalp rahatsızlıkları, romatizma, sindirim, solunum, dolaşım ve deri rahatsızlıklarına iyi gelmektedir.<br><br>
+                    Pamukkale terasları, kaplıca suyu tarafından çökeltilmiş bir tortullu kayaç olan travertenden oluşur.
+                    Bu bölgede, 35 °C den 100 °C ye kadar olan sıcaklık aralığında 17 adet sıcak su kaynağı vardır
+                </p>
+            </div>
+            <div class="city-col">
+                <img style="float: right" src="images/kapadokya.jpg" alt="kapadokya">
+                <h3>Kapadokya</h3>
+                <p>
+                    Kapadokya, 60 milyon yıl önce Erciyes, Hasandağı ve Göllüdağ’ın püskürttüğü lav ve küllerin oluşturduğu 
+                    yumuşak tabakaların milyonlarca yıl boyunca yağmur ve rüzgâr tarafından aşındırılmasıyla ortaya çıkan bölgedir. <br><br>
+                    Kapadokya bölgesi, doğa ve tarihin bütünleştiği bir yerdir. Coğrafi olaylar Peribacaları'nı oluştururken, tarihi süreçte, 
+                    insanlar da bu peribacalarının içlerine evler, kiliseler ve manastırlar oymuş bunları 
+                    fresklerle süsleyerek binlerce yıllık medeniyetlerin izlerini günümüze taşımıştır.<br><br>
+                    Bölgenin tek mimarı malzemesi olan taş yörenin volkanik yapısından dolayı ocaktan çıktıktan sonra yumuşak olduğundan çok rahat işlenebilmekte ancak hava ile 
+                    temas ettikten sonra sertleşerek çok dayanaklı bir yapı malzemesine dönüşmektedir.Kullanılan malzemenin bol olması ve kolay işlenebilmesinden dolayı yöreye 
+                    has olan taş işçiliği gelişerek mimari bir gelenek halini almıştır. Gerek avlu gerekse ev kapılarının malzemesi ahşaptır.
+                    Kemerli olarak yapılmış kapıların üst kısmı stilize sarmaşık veya rozet motifleriyle süslenmiştir. 
+                    Yöredeki güvercinlikler 19. yüzyılın sonları, 18. yüzyılda yapılmış küçük yapılardır. 
+                    İslam resim sanatını göstermek açısından önemli olan güvercinliklerin bir kısmı manastır veya kilise olarak inşa edilmişlerdir. 
+                    Güvercinliklerin yüzeyi yöresel sanatçılar tarafından zengin bir bezemeler, kitabeler ile süslenmişlerdir.<br><br>
+                    Ayrıca Kapadokya'nın en popüler aktivitelerinden birisi sıcak hava balonları ile Kapadokya turu da turistler tarafından büyük ilgi görmektedir.
+                </p>
+            </div>
+            <div class="city-col">
+                <img style="float: left" src="images/karadeniz.jpg" alt="karadeniz">
+                <h3>Karadeniz</h3>
+                <p>
+                    Türkiye, tarihi ve mutfağı kadar doğası ile de eşsizdir. 
+                    Üç tarafının deniz olması, dikey ve paralel uzanan farklı yükseltilere sahip olması ve akarsuların da etkisiyle hem ilkim, 
+                    hem doğa hem de endemik türler açısından çeşitlenen bir flora söz konusudur. 
+                    Bu da doğa araştırmacıları kadar yeşili seven doğa tutkunlarının da Türkiye’yi tercih etme nedenidir. 
+                    Doğu Karadeniz Yaylaları da en çok ziyaret edilen ve mutlaka görülmesi gereken yerler arasındadır.<br><br>
+                    Rize'de bulunan Ayder Yaylası ve Trabzon'da bulunan Uzungöl bölgede en çok ilgi gören doğal güzellikler olarak dikkat çekmektedir.<br><br>
+                    Karadeniz’in en güzel şehirlerinden birisi olan Trabzon’da gitmeniz gereken yerler arasında önemli bir değer ifade eden Sümela Manastırı, 
+                    Trabzon’un Maçka ilçesi sınırlarında yer alan Altındere Köyü içerisinde sarp kayalıklar üzerine kurulmuştur. 
+                    Halk arasında “Meryem Ana” ismiyle anılır.
+                </p>
+            </div>
+            <div class="city-col">
+                <img style="float: right" src="images/istanbul.jpg" alt="istanbul">
+                <h3>İstanbul</h3>
+                <p>
+                    Türkiye’de gezilecek görülecek yerler denildiğinde İstanbul tek başına önemli bir gezi noktasıdır. <br><br>
+                    Türkiye’de en çok ziyaret edilen turistlik yerler arasında yer alan Ayasofya Müzesi; sanat ve mimaride dünyanın en muhteşem anıtlarından biridir. 
+                    Ayasofya Müzesi dünyanın sekizinci harikasıdır.<br><br>
+                    Galata Kulesi İstanbul’un Galata Semtinde yer alan Hezarfen Ahmet Çelebi’nin buradan Üsküdar’a uçmaya çalıştığı ihtişamlı bir eserdir. 
+                    Altmış yedi metre uzunluğundaki kuleden İstanbul manzarasını bütün çıplaklığıyla izleyebilirsiniz. 
+                    Ne zaman ve kim tarafından yapıldığı tam olarak bilinmemekle birlikte tarihte rasathane ve hapishane olarak kullanılmıştır. 
+                    Şehrin merkezinde yer alan kuleye ulaşım rahatlıkla sağlanabilmektedir.<br><br>
+                    1478 yılında Fatih Sultan Mehmed tarafından kurulan, 9 Ekim 1924 yılında Gazi Mustafa Kemal Atatürk’ ün emri ile 
+                    halka kapılarını açan Topkapı Sarayı Müzesi günümüzde turistlerin en uğrak yerlerindendir.<br><br>
+                    Yerebatan Sarnıcı Bizans İmparatoru Justinyen tarafından 542 yılında yaptırılmıştır. 
+                    Suyun içerisinden yükselen sutunların ihtişamı görünleri büyülemektedir. 
+                    9800 metrekare üzerine kurulu olan sarnıç pek çok ulusal etkinliğe ev sahipliği yapmaktadır.
+                </p>
+            </div>
+            <div class="city-col">
+                <img style="float: left" src="images/ege.jpg" alt="ege">
+                <h3>Ege Sahilleri</h3>
+                <p>
+                    Türkiye’de nerede tatil yapmalı, Türkiye’nin en güzel dalış noktaları gibi araştırmalarda Ege bölgesi öne çıkar. 
+                    Ege sahilleri, dalış yapmak ve yüzmek için çok tercih edilir. 
+                    Çeşme, Foça, Urla, Seferihisar, Bergama gibi hem tarih hem deniz turizmi noktaları tatil ve seyahat için öne çıkar. 
+                    Dünyanın en güzel tatil noktaları arasında gösterilen Bodrum da bu anlamda mutlaka görülmeli.
+                </p>
+            </div>
+            <div class="city-col">
+                <img style="float: right" src="images/antalya.jpg" alt="antalya">
+                <h3>Antalya ve Çevresi</h3>
+                <p>
+                    Türkiye’de tatil için en zengin ve kapsamlı konaklama seçeneğini Antalya ve çevresinde bulabilirsiniz. 
+                    Antalya’da otel turizmi yanında doğa ve tarih açısından da başka hiç bir yerde göremeyeceğiniz güzellikler var.
+                </p>
+            </div>
+            <div class="city-col">
+                <img style="float: left" src="images/anıtkabir.jpg" alt="anıtkabir">
+                <h3>Anıtkabir</h3>
+                <p>
+                    Türk Kurtuluş Savaşı’nın ve inkılaplarının önderi ve Türkiye Cumhuriyeti’nin ilk cumhurbaşkanı Mustafa Kemal Atatürk’ün, 
+                    Ankara Anıttepe’de (eski adıyla Rasattepe) bulunan anıt mezarıdır. 
+                    Ayrıca dördüncü cumhurbaşkanı Cemal Gürsel de 1966 yılında devrim şehitleri bölümüne defnedilmiştir 
+                    (6 Kasım 1981 tarihli Devlet Mezarlığı Kanunu 1.madde 2.fıkra gereğince, 27 Ağustos 1988’de çıkartıldı). 
+                    1973’den beri İsmet İnönü’nün kabri de Anıtkabir’dedir. 
+                    Başkent Ankara’da bulunan Anıtkabir, her yıl yerli yabancı milyonlarca kişi tarafından ziyaret edilmektedir. 
+                    Özellikle 10 Kasım ve milli bayramlarda yoğun bir ziyaretçi trafiği yaşanmakta, yurdun birçok yerinden gelen vatandaşlar Anıtkabir’i 
+                    Türk bayrakları ile donatmaktadır.
+                </p>
+            </div>
+            <div class="city-col">
+                <img style="float: right" src="images/antep.jpg" alt="antep">
+                <h3>Gaziantep & Hatay & Adana</h3>
+                <p>
+                    Türkiye, gurme turizmi açısından çok özeldir. 
+                    Çünkü Türk yemekleri; Ortadoğu baharatları ve pişirme teknikleri, uzakdoğu izleri, göçebe Türk geleneği ve 
+                    Akdeniz mutfağının bir bileşimini sunan eşsiz bir dokuya sahiptir. 
+                    Bu özel yemek dokusunu deneyimlemek için Gaziantep, Hatay ve Adana şehirlerindeki restoranlar tercih edilir. 
+                    Gaziantep, UNESCO tarafından dünya gastronomi kentleri listesine alınmıştır.
+                </p>
+            </div>
+            <div class="city-col">
+                <img style="float: left" src="images/nemrut.jpg" alt="nemrut">
+                <h3>Nemrut Dağı</h3>
+                <p>
+                    Nemrut Dağı, Türkiye'nin Adıyaman ilinde yer alan 2.150 metre yüksekliğinde bir dağdır. 
+                    Adıyaman'ın Kahta ilçesinde yer alan Nemrut Dağı, Ankar Dağları civarında Toros dağ silsilesinde bulunur. 
+                    1987'de UNESCO tarafından Dünya Mirası ilan edilen Nemrut Dağı, 1988 yılında tesis edilen Nemrut Dağı Millî Parkı ile korumaya alınmıştır. 
+                    Nemrut Dağı Kültür rotası Adıyaman merkezde bulunan Perre Antik Kenti ile başlayıp sonrasında Kahta ilçesinde bulunan Karakuş Tümülüsü, 
+                    Cendere Köprüsü ve Kanyonu, Komagene Medeniyeti'nin yazlık başkenti olan Arsemia Ören Yeri, Kahta Kalesi, Şeytan Köprüsü ve 
+                    nihayetinde Nemrut Dağı'nda son bulur. 
+                </p>
+            </div>
+            <div class="city-col">
+                <img style="float: right" src="images/salda.jpg" alt="salda">
+                <h3>Salda Gölü</h3>
+                <p>
+                    Salda Gölü, Burdur'un Yeşilova ilçesinde, ilçe merkezine 4 km uzaklıkta, ormanla kaplı tepeler, kayalık araziler ve 
+                    küçük alüvyal ovalarla çevrili hafif tuzlu karstik bir göldür. 
+                    Göller Yöresi içinde, dışa akışı olmayan kapalı havzalı yapıdadır. 
+                    Yüzölçümü yaklaşık 44 kilometrekaredir. 184 metreye varan derinliği ile Türkiye'nin 3. en derin gölüdür. 
+                    Gölde oluşan hidromanyezit minerali "biyolojik mineralizasyon" un en güzel ve güncel örneklerinden biridir. <br><br>
+                    Suyunun temizliği ve turkuaz rengiyle oluşan güzel manzaranın yanı sıra, güneybatı ve güneydoğu kıyılarında 
+                    yer alan küçük kumsallar alanın rekreaktif amaçlı kullanımına olanak sağlamaktadır. 
+                </p>
+            </div>
+        </div>
+    </section>
+    <!--ziyaretçi yorumları-->
+    <section class="yorumlar">
+        <h2>Ziyaretçilerimizin Yorumları</h2><!--başlık-->
+        <div style="flex-direction: row;"class="row"><!--yorumların aynı satırda görünmesi için özellik eklendi-->
+            <div class="yorumlar-col">
+                <img src="images/pp1.png"><!--kullanıcıya profil resmi yerine icon eklendi-->
+                <div>
+                    <p>I finally fulfilled my long-awaited dream vacation plan in Turkey. 
+                        I made it happen with my family, and we had an incredible time being enchanted by its natural beauty and wonderful cities.
+                         Thank you for the provided opportunities and the amazing tour.</p>
+                    <h3>Jennifer Perkins</h3>
+                    <i class="fa-solid fa-star"></i><!--puan için yıldız iconları eklendi-->
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                </div>
+                <div class="yorumlar-col">
+                    <img src="images/pp2.png"><!--kullanıcıya profil resmi yerine icon eklendi-->
+                    <div>
+                        <p>Turkey is an amazing country with breathtaking beauty that everyone should see before they die. 
+                            I am incredibly happy to have had the chance to experience it. 
+                            I will definitely come back again!<br><br></b> LOVE FROM AUSTRIA <3.<br><br> </p>
+                        <h3>Niklas Hinteregger</h3>
+                        <i class="fa-solid fa-star"></i><!--puan için yıldız iconları eklendi-->
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <!--bize ulaşın-->
+    <section class="bize-ulasin">
+        <h1 style="font-weight: 300;">Türkiye'nin Her Yerine Gerçekleştirdiğimiz Turistik Turlar İçin Bize Ulaşabilirsiniz.</h1>
+        <a href="contact.html" style="color: white"class="hero-btn">Bizimle İletişime Geçin</a><!--butona link verildi ve iletişim sayfasına yönlendirildi-->
+    </section>
+    <!--footer ve site logoları-->
+    <section class="footer">
+        <div class="icons">
+            <ul class="social-media-list"><!--sayfanın altında yer alacak icon listesi oluşturuldu ve sosyal medya iconları ve linkler eklendi-->
+                <li class="social-media-item"><a href="https://www.facebook.com/" target="_blank" rel="nofollow"><i class="fab fa-facebook-f"></i></a></li>
+                <li class="social-media-item"><a href="https://twitter.com/" target="_blank" rel="nofollow"><i class="fab fa-twitter"></i></a></li>
+                <li class="social-media-item"><a href="https://www.instagram.com/" target="_blank" rel="nofollow"><i class="fab fa-instagram"></i></a></li>
+                <li class="social-media-item"><a href="https://www.linkedin.com/" target="_blank" rel="nofollow"><i class="fab fa-linkedin-in"></i></a></li>
+                <li class="social-media-item"><a href="https://www.github.com/" target="_blank" rel="nofollow"><i class="fab fa-github"></i></a></li>
+                </ul>
+        </div>
+    </section>
+    <!--menu scripti-->
+    <script>
+        function toggleMenu(){ //fonksiyon oluştruldu
+          var menu = document.getElementById("menu"); //menu ismine sahip elementi alır.
+  
+          if (menu.style.display === "none") {// eğer menünün display özelliği "none" ise display "block" olarak değiştirilir
+            menu.style.display = "block";
+          } else {
+            menu.style.display = "none"; //eğer menünün display özelliği "none" değilse display "none" olarak değiştirilir
+          }
+        }
+    </script> 
+</body>
+</html>

@@ -1,0 +1,532 @@
+*{
+    margin: 0px; /* margin ayarı */
+    padding: 0px;/* padding ayarı */
+    font-family: 'Gill Sans', "Fantasy"; /* font değiştirildi */
+}
+
+.header {
+    min-height: 100vh; /*  ekranın tamamını kaplamasını sağlar vh=viewport.*/
+    width: 100%;  /* ekranın tamamını kaplamasını sağlar.*/
+    background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(../images/arkaplan.jpg);/* arkaplan eklendi ve yarı saydam olarak ayarlandı */
+    background-position: center;/* pozisyonu merkez olarak belirlendi */
+    background-size: cover; /* arkaplanın alanı tamamen kaplaması */
+    position: relative;/* diğer içeriklerle uyumlu konumlandırılması için */
+}
+.anabaslik{
+    font-size: 20px; /* yazı boyutu */
+    font-weight: 700; /* yazı kalınlığı */
+}
+nav {
+    display: flex; /* elementlerin yatay ve dikey olarak sıralanmasını sağlar */
+    padding: 2% 6%; /* üst ve alt kenarlara %2, sol ve sağ kenarlara %6 boşluk */
+    justify-content: space-between; /* yatayda aralarda boşluk bırakarak sağa ve sola yayar */
+    align-items: center; /* elementleri merkeze ortalar */
+}
+
+nav img {
+    width:150px; /* genişlik ayarı */
+}
+
+.nav-links ul li {
+    list-style: none; /* listedeki noktaları kaldırır */
+    display: inline-block; /* öğenin bir satırda diğer öğelerle aynı hizada görüntülenmesini ve özelliklerini almasını sağlar */
+    padding: 8px 12px; /* padding ayarı */
+    position: relative; /* diğer içeriklerle uyumlu konumlandırılması için */
+}
+
+.nav-links ul li a {
+    color: #fff; /* yazı rengi */
+    text-decoration: none; /* yazıdaki süslemelerini kaldırır */
+    font-size: 16px; /* yazı boyutu */
+    text-transform: uppercase; /* yazıyı büyük harfe çevirir */
+    font-family: 'PT Sans Narrow', sans-serif; /* font değiştirildi */
+}
+
+.nav-links ul li::after {
+    content:' '; /* öğeye boş içerik ekler */
+    width:0%; /* genişlik ayarı */
+    height: 2px; /* yükseklik ayarı */
+    background-color: rgb(230, 190, 60); /* arkaplan rengi */
+    display: block; /* bir öğenin blok düzeninde görüntülenmesini sağlar. */
+    margin: 5px auto; /* margin ayarı */
+    transition: 0.5s; /* geçiş ayarı */
+}
+
+.nav-links ul li:hover::after {
+    width: 100%; /* genişlik ayarı */
+}
+
+.text-box {
+    width: 90%; /* genişlik ayarı */
+    color:#fff; /* yazı rengi */
+    position: absolute; /* textboxun pozisyonunu belirtmek için kullanılır */
+    top:50%; /* üste göre pozisyonu */
+    left:50%; /* sola göre pozisyonu */
+    transform: translate(-50%,-50%); /* bir öğenin kendisini kendi merkez noktası etrafında yatay ve dikey olarak kaydırmasını sağlar. */
+    text-align: center; /* yazıyı ortalamak için */
+}
+
+.text-box h1 {
+    font-size: 62px; /* yazı boyutu */
+}
+
+.text-box p {
+    margin: 10px 0px 40px; /* margin ayarı */
+    font-size: 18px; /* yazı boyutu */
+    color: #fff; /* yazı rengi */
+    font-weight: 350; /* yazı kalınlığı */
+}
+
+.hero-btn {
+    display: inline-block; /* öğenin bir satırda diğer öğelerle aynı hizada görüntülenmesini ve özelliklerini almasını sağlar */
+    text-decoration: none; /* yazıdaki süslemelerini kaldırır */
+    color: black; /* yazı rengi */
+    border: 1px #fff solid;
+    padding: 12px 34px; /* padding ayarı */
+    font-size: 13px; /* yazı boyutu */
+    position: relative; /* diğer içeriklerle uyumlu konumlandırılması için */
+    cursor: pointer; /* yazı yazma imlecini değiştirdik */
+}
+
+.hero-btn:hover {
+    border: 1px solid rgb(185, 226, 213); /* border rengi ve kalınlığı */
+    background-color: rgb(185, 226, 213); /* arkaplan rengi */
+    transition: 1s;
+}
+/* tooltip */
+.tooltip {
+    position: relative; /* diğer içeriklerle uyumlu konumlandırılması için */
+    display: inline-block; /* öğenin bir satırda diğer öğelerle aynı hizada görüntülenmesini ve özelliklerini almasını sağlar */
+  }
+  
+.tooltip .tooltiptext {
+    visibility: hidden; /* öğeyi gizler */
+    width: 120px; /* genişlik ayarı */
+    background-color: #000; /* arkaplan rengi */
+    color: #fff; /* yazı rengi */
+    text-align: center; /* yazıyı ortalamak için */
+    border-radius: 6px; /* kenarları yuvarlamak için */
+    padding: 5px; /* padding ayarı */
+    z-index: 1; /* öğenin diğer öğelerin üzerinde görünemsini sağlar */
+    bottom: 125%; /* aşağıya göre pozisyon */
+    left: 50%; /* sola göre pozisyon */
+    transform: translateX(-50%); /* yatay olarak kaydırma işlemi */
+    opacity: 0; /* saydamlık ayarı */
+    transition: opacity 0.3s; /* opaklık geçişi */
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible; /* öğeyi görünür yapar */
+    opacity: 1; /* saydamlık değeri */
+}
+
+nav .fas {
+    display: none; /* öğeyi kaldırır */
+}
+/* responsive design */
+@media (max-width: 700px) { /* sayfanın genişliği 700px altındaysa */
+    .text-box h1 {
+        font-size: 30px; /* yazı boyutu */
+    }
+
+    .nav-links ul li {
+        display: block; /* bir öğenin blok düzeninde görüntülenmesini sağlar. */
+    }
+
+    .nav-links {
+        position: absolute; /* tam pozisyonu belirtmek için kullanılır */
+        background-color: rgb(230, 190, 60); /* arkaplan rengi */
+        height: 100vh; /* yükseklik ayarı */
+        width: 200px; /* genişlik ayarı */
+        top:0px; /* yukarıya göre pozisyon */
+        right: -200px; /* sağa göre pozisyon */
+        text-align: left; /* yazıyı sola dayadık */
+        z-index: 2; /* öğenin diğer öğelerin üzerinde görünemsini sağlar */
+        transition: 1s; /* geçiş için belirlenen süre */
+    }
+
+    nav .fas {
+        display: block; /* bir öğenin blok düzeninde görüntülenmesini sağlar. */
+        color: #fff; /* yazı rengi */
+        margin: 10px; /* margin ayarı */
+        font-size: 22px; /* yazı boyutu */
+        cursor: pointer; /* yazı yazma imlecini değiştirdik */
+    }
+}
+
+.city {
+    margin: auto; /* margin ayarı */
+    text-align: center; /* yazıyı ortalamak için */
+    padding-top: 100px; /* padding ayarı */
+}
+
+h1 {
+    font-size: 38px; /* yazı boyutu */
+    font-weight: 600; /* yazı kalınlığı */
+}
+
+p {
+    font-family: 'PT Sans Narrow', sans-serif; /* font değiştirildi */
+    color: black; /* yazı rengi */
+    font-size: 20px; /* yazı boyutu */
+    font-weight: 200; /* yazı kalınlığı */
+    line-height: 25px; /* satır arası boşluk oranı*/
+    padding: 10px; /* padding ayarı */
+}
+
+.row {
+    display: flex; /* elementlerin yatay ve dikey olarak sıralanmasını sağlar */
+    flex-direction: column; /* elementlerin dikey olarak sıralanmasını sağlar */
+    margin-top: 5%; /* margin ayarı */
+    justify-content: space-between; /* yatayda aralarda boşluk bırakarak sağa ve sola yayar */
+}
+
+.city-col {
+    flex-basis: 30%; /* flex elemanın başlangıç genişliğini belirler */
+    background-color: rgb(185, 226, 213); /* arkaplan rengi */
+    border-radius: 10px; /* kenarları yuvarlamak için */
+    margin-bottom: 5%; /* margin ayarı */
+    margin-left: 5%; /* margin ayarı */
+    margin-right: 5%; /* margin ayarı */
+    box-sizing: border-box; /* genişli ve yükseklik hesaplamasının kutunun içinde kalmasını sağlar. */
+}
+
+.city-col img {
+    width: 60%; /* genişlik ayarı */
+    height: 60%; /* yükseklik ayarı */
+    display: block; /* bir öğenin blok düzeninde görüntülenmesini sağlar. */
+    border-radius: 10px; /* kenarları yuvarlamak için */
+    background-size: contain;
+}
+h3 {
+    font-size: 32px; /* yazı boyutu */
+    text-align: center; /* yazıyı ortalamak için */
+    color: #000; /* yazı rengi */
+    font-weight: 600; /* yazı kalınlığı */
+    margin: 10px 0; /* margin ayarı */
+}
+
+.city-col:hover {
+  box-shadow: 0 0 20px 0px rgba(0,0,0,0.2); /* hover edilince box'a gölge ekler */
+}
+/* responsive design */
+@media (max-width: 700px) { /* sayfanın genişliği 700px altındaysa */
+    .row {
+        flex-direction: column; /* elementlerin dikey olarak sıralanmasını sağlar */
+    }
+}
+
+/*-----yorumlar------*/
+.yorumlar {
+    width: 80%; /* genişlik ayarı */
+    margin: auto; /* margin ayarı */
+    text-align: center; /* yazıyı ortalamak için */
+}
+
+.yorumlar h2{
+    font-size: 40px; /* yazı boyutu */
+    color: black; /* yazı rengi */
+    font-weight: 600; /* yazı kalınlığı */
+    text-shadow: 1px 2px 4px rgba(0,0,0,0.2); /* yazıya gölge ekler */
+}
+
+.yorumlar-col img {
+    height: 40px; /* yükseklik ayarı */
+    margin-left: 5px; /* margin ayarı */
+    margin-right: 30px; /* margin ayarı */
+    border-radius: 50%; /* kenarları yuvarlamak için */
+} 
+.yorumlar-col {
+    flex-basis: 44%; /* flex elemanın başlangıç genişliğini belirler */
+    border-radius: 10px; /* kenarları yuvarlamak için */
+    margin-bottom: 5%; /* margin ayarı */
+    text-align: left; /* yazıyı sola dayadık */
+    background-color: rgb(185, 226, 213); /* arkaplan rengi */
+    padding: 25px; /* padding ayarı */
+    cursor: pointer; /* yazı yazma imlecini değiştirdik */
+    display: flex; /* elementlerin yatay ve dikey olarak sıralanmasını sağlar */
+}
+
+.yorumlar-col p {
+    color: #191919; /* yazı rengi */
+    font-size: 20px; /* yazı boyutu */
+    line-height: 26px; /* satır arası boşluk oranı*/
+    text-shadow: 0.5px 1px 2px rgba(0,0,0,0.2); /* yazıya gölge ekler */
+}
+
+.yorumlar-col h3 {
+    margin-top: 35px; /* margin ayarı */
+    text-align: left; /* yazıyı sola dayadık */
+}
+
+.yorumlar-col .fa-solid , .fa-regular {
+    color: rgb(229, 21, 21); /* icon rengi */
+}
+
+/*bize ulaşın sectionı*/
+.bize-ulasin {
+    margin: 100px auto; /* margin ayarı */
+    width: 80%; /* genişlik ayarı */
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/arkaplan2.jpg); /* arkaplan eklendi ve yarı saydam olarak ayarlandı */
+    background-position: center; /* pozisyonu merkez olarak belirlendi */
+    background-size: cover; /* arkaplanın alanı tamamen kaplaması */
+    border-radius: 10px; /* kenarları yuvarlamak için */
+    text-align: center; /* yazıyı ortalamak için */
+    padding: 100px 0; /* padding ayarı */
+}
+.bize-ulasin h1 {
+    color: #ffffff; /* yazı rengi */
+    margin-bottom: 40px; /* margin ayarı */
+    padding: 0px; /* padding ayarı */
+}
+/* responsive design */
+@media (max-width:700px) { /* sayfanın genişliği 700px altındaysa */
+    .bize-ulasin h1 {
+        font-size: 24px; /* yazı boyutu */
+    }
+}
+.footer {
+    background-color: #f8f8f8; /* arkaplan rengi */
+    padding: 20px 0; /* padding ayarı */
+    text-align: center; /* yazıyı ortalamak için */
+}
+
+.container {
+    max-width: 1200px;  /* genişlik ayarı */
+    margin: 0 auto; /* margin ayarı */
+}
+
+.social-media-list {
+    list-style-type: none; /* listedeki noktaları kaldırır */
+    padding: 0; /* padding ayarı */
+    margin: 0; /* margin ayarı */
+}
+
+.social-media-item {
+    display: inline-block; /* öğenin bir satırda diğer öğelerle aynı hizada görüntülenmesini ve özelliklerini almasını sağlar */
+    margin-right: 10px; /* margin ayarı */
+}
+
+.social-media-item:hover {
+    display: inline-block; /* öğenin bir satırda diğer öğelerle aynı hizada görüntülenmesini ve özelliklerini almasını sağlar */
+    margin-right: 10px; /* margin ayarı */
+    animation: shake 0.5s; /* titreme animasyonu */
+    animation-iteration-count: infinite; /* animasyonun sonsuz olmasını sağlar */
+}
+
+.social-media-item a {
+    color: #777; /* yazı rengi */
+    font-size: 20px; /* yazı boyutu */
+}
+
+.social-media-item a:hover {
+    color: #000; /* yazı rengi */
+}
+
+@keyframes shake{ /* social-media-item için titreme animasyonu */
+    0% { transform: translate(1px, 1px) rotate(0deg);  }
+    10% { transform: translate(-1px, -2px) rotate(-1deg);  }
+    20% { transform: translate(-3px, 0px) rotate(1deg);  }
+    30% { transform: translate(3px, 2px) rotate(0deg);  }
+    40% { transform: translate(1px, -1px) rotate(1deg);  }
+    50% { transform: translate(-1px, 2px) rotate(-1deg);  }
+    60% { transform: translate(-3px, 1px) rotate(0deg);  }
+    70% { transform: translate(3px, 1px) rotate(-1deg);  }
+    80% { transform: translate(-1px, -1px) rotate(1deg);  }
+    90% { transform: translate(1px, 2px) rotate(0deg);  }
+    100% { transform: translate(1px, -2px) rotate(-1deg);  }
+}
+/*-------hakkimizda-sayfası-------*/
+.sub-header {
+    height: 60vh; /* yükseklik ayarı */
+    width: 100%;  /* genişlik ayarı */
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/arkaplan4.jpg) ; /* arkaplan eklendi ve yarı saydam olarak ayarlandı */
+    background-position: center; /* pozisyonu merkez olarak belirlendi */
+    background-size: cover; /* arkaplanın alanı tamamen kaplaması */
+    text-align: center; /* yazıyı ortalamak için */
+    color: #fff; /* yazı rengi */
+}
+.sub-header h1 {
+    margin-top: 50px; /* margin ayarı */
+}
+
+.hakkimizda {
+    width: 80%;  /* genişlik ayarı */
+    margin:auto ; /* margin ayarı */
+    padding-top: 80px; /* padding ayarı */
+    padding-bottom: 50px; /* padding ayarı */
+}
+.hakkimizda-col {
+    flex-basis: 48%; /* flex elemanın başlangıç genişliğini belirler */
+    padding: 30px 2px; /* padding ayarı */
+}
+.hakkimizda-col img {
+    width: 100%;  /* genişlik ayarı */
+    border-radius: 10px; /* kenarları yuvarlamak için */
+}
+.hakkimizda-col h1 {
+    padding-top: 0px; /* padding ayarı */
+}
+.hakkimizda-col p {
+    padding: 15px 0px 25px; /* padding ayarı */
+
+}
+.red-btn {
+    border: 1px #ccc solid; /* border rengi ve kalınlığı */
+    background: transparent; /* arkaplan transparan yapıldı */
+    color: black; /* yazı rengi */
+    border-radius: 10px; /* kenarları yuvarlamak için */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* butona gölge ekler */
+}
+
+.image-container {
+    display: grid; /* öğenin grid konteyneri gibi davranması sağlanır */
+    grid-template-columns: repeat(3, 1fr); /* sütun sayısı belirler, 3 sütun 1fr aralıklarla ayarlanmıştır */
+    grid-gap: 10px; /* grid içerisindeki öğelerin arasındaki boşluk */
+    margin-bottom: 5%; /* margin ayarı */
+}
+
+.image-container img {
+    width: 100%;  /* genişlik ayarı */
+    height: 100%; /* yükseklik ayarı */
+}
+
+.image-container .image {
+    position: relative; /* diğer içeriklerle uyumlu konumlandırılması için */
+    overflow: hidden; /* taşan ögeyi gizler */
+}
+
+.image-container .image img {
+    width: 100%;  /* genişlik ayarı */
+    height: 100%; /* yükseklik ayarı */
+    transition: transform 0.4s ease; /* resmin boyutunu değiştiren geçiş ayarı */
+}
+
+.image-container .image:hover img {
+    transform: scale(1.2); /* resmin boyutunu değiştiren geçiş ayarı */
+    border-radius: 10px; /* kenarları yuvarlamak için */
+}
+
+.image-container .image .layer {
+    position: absolute; /* tam pozisyon ayarı için kullanılır */
+    top: 0; /* yukarıya göre pozisyonu */
+    left: 0; /* sola göre pozisyonu */
+    width: 100%;  /* genişlik ayarı */
+    height: 100%; /* yükseklik ayarı */
+    background-color: rgba(0, 0, 0, 0.7); /* arkaplan rengi */
+    display: flex; /* elementlerin yatay ve dikey olarak sıralanmasını sağlar */
+    align-items: center; /* elementleri ortalar */
+    justify-content: center; /* flex container elemanlarını ortalar */
+    opacity: 0; /* saydamlık değeri */
+    transition: opacity 0.4s ease; /* opaklığı değiştiren geçiş ayarı */
+}
+
+.image-container .image:hover .layer {
+    opacity: 1; /* saydamlık değeri */
+    border-radius: 10px; /* kenarları yuvarlamak için */
+}
+
+.image-container .image .layer h3 {
+    color: #fff; /* yazı rengi */
+    font-size: 24px; /* yazı boyutu */
+    text-align: center; /* yazıyı ortalamak için */
+    padding: 10px; /* padding ayarı */
+}
+
+/*--------iletişim sayfası---------*/
+
+.location {
+    width: 80%;  /* genişlik ayarı */
+    margin: auto; /* margin ayarı */
+    padding: 80px 0px; /* padding ayarı */
+}
+.location iframe {
+    width: 100%;  /* genişlik ayarı */
+}
+.contact-us {
+    width: 80%;  /* genişlik ayarı */
+    margin: auto; /* margin ayarı */
+}
+.contact-info{
+    display: flex; /* elementlerin yatay ve dikey olarak sıralanmasını sağlar */
+    flex-direction: row; /* elementlerin yatay olarak sıralanmasını sağlar */
+    margin-left: 10%; /* margin ayarı */
+}
+.contact-info {
+    flex-basis: 48%; /* flex elemanın başlangıç genişliğini belirler */
+    margin-bottom: 30px; /* margin ayarı */
+}
+.contact-info div {
+    display: flex; /* elementlerin yatay ve dikey olarak sıralanmasını sağlar */
+    align-items: center; /* elementleri ortalar */
+    margin-bottom: 40px; /* margin ayarı */
+}
+.contact-info div .fa-solid {
+    font-size: 28px; /* yazı boyutu */
+    color: rgb(185, 226, 213); /* arkaplan rengi */
+    margin: 10px ; /* margin ayarı */
+    margin-right:30px ; /* margin ayarı */
+} 
+.contact-info div p {
+    padding: 0px; /* padding ayarı */
+}
+.contact-info div h5 {
+    font-size: 20px; /* yazı boyutu */
+    margin-bottom: 5px; /* margin ayarı */
+    color: #000000; /* yazı rengi */
+    font-weight: 400; /* yazı kalınlığı */
+}
+
+h4{
+    margin-bottom: 2%; /* margin ayarı */
+}
+/* responsive design */
+@media (max-width:700px) { /* sayfanın genişliği 700px altındaysa */
+    .contact-info{
+        flex-direction: column; /* elementlerin dikey olarak sıralanmasını sağlar */
+    }
+}
+
+/* iletişim formu */
+.contact-form {
+    flex-basis: 48%; /* flex elemanın başlangıç genişliğini belirler */
+    margin-bottom: 30px; /* margin ayarı */
+}
+.contact-form div {
+    display: flex; /* elementlerin yatay ve dikey olarak sıralanmasını sağlar */
+    align-items: center; /* elementleri ortalar */
+    margin-bottom: 40px; /* margin ayarı */
+}
+.contact-form div .fa-solid {
+    font-size: 28px; /* yazı boyutu */
+    color: black; /* yazı rengi */
+    margin: 10px ; /* margin ayarı */
+    margin-right:30px ; /* margin ayarı */
+} 
+.contact-form div p {
+    padding: 0px; /* padding ayarı */
+}
+.contact-form div h5 {
+    font-size: 20px; /* yazı boyutu */
+    margin-bottom: 5px; /* margin ayarı */
+    color: black; /* yazı rengi */
+    font-weight: 400; /* yazı kalınlığı */
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;  /* genişlik ayarı */
+    padding: 15px; /* padding ayarı */
+    margin-bottom: 17px; /* margin ayarı */
+    outline: none; /* dış hat çizgisini kaldırır */
+    border: 1px #ccc solid; /* border rengi ve kalınlığı */
+    box-sizing: border-box; /* genişli ve yükseklik hesaplamasının kutunun içinde kalmasını sağlar. */
+    border-radius: 10px; /* kenarları yuvarlamak için */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* form elemanlarına gölge ekler */
+    transition: border-color 0.3s ease, border-width 0.3s ease; /* form elemanlarına hover edildiğinde olmasını istediğimiz geçiş*/
+}
+
+.contact-form input:hover, /* input alanlarına hover edildiğinde değişecek özellikler */
+.contact-form textarea:hover { /* textarea alanına hover edildiğinde değişecek özellikler */
+    border-color: rgb(185, 205, 226);  /* border rengi */
+    border-width: 3px;  /* border kalınlığı */
+}
